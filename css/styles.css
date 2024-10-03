@@ -11712,10 +11712,10 @@ h2 {
 }
 
 @media (max-width: 768px) {
-.resume-section-content.d-flex {
-	flex-direction: column; /* Stacks the text on top of the carousel */
-}
-.text-block {
-	margin-right: 0; /* Remove margin on small screens to avoid unnecessary space */
-}
+	.resume-section-content.d-flex {
+		flex-direction: column; /* Stacks the text on top of the carousel */
+	}
+	.text-block {
+		margin-right: 0; /* Remove margin on small screens to avoid unnecessary space */
+	}
 }
