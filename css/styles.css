@@ -11756,4 +11756,23 @@ h2 {
         height: 100%; /* Full height */
     }
 }
+.resume-section {
+    width: 100%; /* Default for small screens */
+    max-width: 100%; /* Ensure it takes full width on small screens */
+    margin: 0 auto;
+    padding: 20px; /* Optional padding */
+}
+
+@media (min-width: 768px) { /* Adjust the breakpoint as needed */
+    .resume-section {
+        max-width: 90%; /* Max width for larger screens */
+    }
+}
+
+@media (min-width: 1200px) { /* Another breakpoint for even larger screens */
+    .resume-section {
+        max-width: 65%; /* Further adjust max width for very large screens */
+    }
+}
+
 
