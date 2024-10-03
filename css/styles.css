@@ -11705,3 +11705,8 @@ h2 {
 .navbar-brand {
 	color: #000; /* Set brand text color to black */
 }
+@media (max-width: 768px) {
+	.resume-section {
+		max-width: 100%;
+	}
+}
