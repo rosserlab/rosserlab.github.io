@@ -11581,17 +11581,34 @@ h1 {
   position: fixed;
   bottom: 10px; /* Adjust distance from bottom */
   left: 10px;   /* Adjust distance from left */
-  max-height: 40px; /* Adjust size as needed */
+  max-height: 40px; /* Default size for larger screens */
   z-index: 1000; /* Ensure images are above the bar */
 }
 
+/* Rescale image on mobile devices */
+@media (max-width: 767px) {
+  .left-image {
+    max-height: 25px; /* Reduce size for smaller screens */
+  }
+}
+
+
+/* Styles to position the SVG images */
 .right-image {
   position: fixed;
   bottom: 10px; /* Adjust distance from bottom */
   right: 10px;  /* Adjust distance from right */
-  max-height: 40px; /* Adjust size as needed */
+  max-height: 40px; /* Default size for larger screens */
   z-index: 1000; /* Ensure images are above the bar */
 }
+
+/* Rescale image on mobile devices */
+@media (max-width: 767px) {
+  .right-image {
+    max-height: 25px; /* Reduce size for smaller screens */
+  }
+}
+
 
 /* White bar with transparency under the navbar */
 .transparent-bar2 {
@@ -11688,4 +11705,3 @@ h2 {
 .navbar-brand {
 	color: #000; /* Set brand text color to black */
 }
-
