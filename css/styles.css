@@ -11716,4 +11716,44 @@ h2 {
 	.text-block {
 		margin-right: 0; /* Remove margin on small screens to avoid unnecessary space */
 	}
+	.content-below-banner {
+		flex-basis: 100%; /* Make the text section full width on small screens */
+	}
+	.image-column {
+		flex-basis: 100%; /* Make the image section full width on small screens */
+		margin-top: 20px; /* Add some space above the images */
+	}
+	.media-entry {
+		flex-direction: column; /* Stack the image above the text on small screens */
+	}
+	.media-entry .image-container {
+		margin-bottom: 10px; /* Add space below the image */
+	}	
 }
+.iframe-container {
+    max-width: 1200px; /* Set max width for larger screens */
+    width: 100%; /* Make it responsive */
+    margin: 0 auto; /* Center the iframe */
+}
+
+.iframe-container iframe {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Auto height to maintain aspect ratio */
+    min-height: 675px; /* Minimum height for larger screens */
+}
+
+@media (max-width: 768px) {
+    .iframe-container {
+        padding-bottom: 56.25%; /* Aspect ratio for 16:9 */
+        position: relative; /* Positioning context */
+    }
+
+    .iframe-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+    }
+}
+
