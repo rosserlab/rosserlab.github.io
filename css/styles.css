@@ -11705,13 +11705,11 @@ h2 {
 .navbar-brand {
 	color: #000; /* Set brand text color to black */
 }
-@media (max-width: 768px) {
-	.resume-section {
-		max-width: 100%;
-	}
-}
 
 @media (max-width: 768px) {
+	.resume-section {
+		max-width: 100%; /* Allow section to use full width on small screens */
+	}
 	.resume-section-content.d-flex {
 		flex-direction: column; /* Stacks the text on top of the carousel */
 	}
