@@ -11653,14 +11653,11 @@ h1 {
 p.lead {
     font-size: 1.21rem; /* Increased from 1.15rem */
 }
-h1 span {
-    font-size: 6.5vw; /* 5% of the viewport width */
-}
+
 h2 {
-    font-size: 5vw;
-}
-body {
-  background-color: #f8f9fa; /* Set your page's background color */
+    font-size: 75px; /* Change font size */
+    color: #005030;  /* Change text color */
+    text-transform: capitalize; /* Capitalize each word */
 }
 
 
