@@ -39,6 +39,37 @@
                 text-align: center; /* Center text description below images */
                 margin-top: 5px; /* Add some space above description */
             }
+
+            @media (max-width: 768px) {
+                .resume-section {
+                    max-width: 100%; /* Allow section to use full width on small screens */
+                }
+                .resume-section-content.d-flex {
+                    flex-direction: column; /* Stacks the text on top of the carousel */
+                }
+                .text-block {
+                    margin-right: 0; /* Remove margin on small screens to avoid unnecessary space */
+                }
+                .content-below-banner {
+                    flex-basis: 100%; /* Make the text section full width on small screens */
+                }
+                .image-column {
+                    flex-basis: 100%; /* Make the image section full width on small screens */
+                    margin-top: 20px; /* Add some space above the images */
+                }
+                .media-entry {
+                    flex-direction: column; /* Stack the image above the text on small screens */
+                }
+                .media-entry .image-container {
+                    margin-bottom: 10px; /* Add space below the image */
+                }	
+            }  
+            @media (max-width: 1300px) {
+                .resume-section {
+                    max-width: 90%; /* Allow section to use full width on small screens */
+                }
+                }	
+            }                      
             </style>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH4W49CLSZ"></script>
@@ -120,24 +151,43 @@
     <div class="content-below-banner">
          <section class="resume-section">
             <h2 class="text-capitalize" style="color: #005030;">People</h2>
-             <div class="resume-section-content d-flex"> <!-- Added d-flex class for flexbox -->
-                <div class="text-block mr-4"> <!-- Added margin-right to separate text from carousel -->
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0" style="text-transform: none;">Dr. Neil Rosser</h3>
-                            <p class="lead mb-5">
-                                <b>Assistant Professor, University of Miami</b> <br>
-                                <b>Associate of Entomology, MCZ, Harvard University</b><br>
-                                <span style="display: block; padding-top: 0.5em;"></span>
-                                I did my undergraduate degree in Ecology at the University of East Anglia, with a year at the Université de la Méditerranée, in Marseille. 
-                                I then worked at the Instituto Nacional de Biodiversidad in Costa Rica, which led me to pursue research in neotropical biodiversity.
-                                I did my Masters in Taxonomy and Biodiversity at Imperial College and the Natural History Museum in London, and I did my PhD at University College London with Jim Mallet.
-                            </p>
-                        </div>
-                    </div>                    
+            <div class="resume-section-content d-flex flex-column flex-lg-row"> <!-- Added flex-lg-row for larger screens -->
+                <div class="text-block mr-4"> <!-- Added margin-right to separate text from image -->
+                    <h3 class="mb-0" style="text-transform: none;">Dr. Neil Rosser</h3>
+                    <p class="lead mb-5">
+                        <b>Assistant Professor, University of Miami</b> <br>
+                        <b>Associate of Entomology, MCZ, Harvard University</b><br>
+                        <span style="display: block; padding-top: 0.5em;"></span>
+                        I did my undergraduate degree in Ecology at the University of East Anglia, with a year at the Université de la Méditerranée, in Marseille. 
+                        I then worked at the Instituto Nacional de Biodiversidad in Costa Rica, which led me to pursue research in neotropical biodiversity.
+                        I did my Masters in Taxonomy and Biodiversity at Imperial College and the Natural History Museum in London, and I did my PhD at University College London with Jim Mallet.
+                    </p>
                 </div>
+                <div class="image-container" style="float: right; margin-left: 20px; margin-bottom: 20px;">
+                    <img src="assets/img/people/me_Brazil_cropped_portrait.jpg" alt="Field work in the Brazilian Amazon" class="image-item" style="width: 200px; height: auto;" />
+                    <div class="description" style="text-align: center; margin-top: 0.5em;">Field work in the Brazilian Amazon</div>
+                </div>
+            </div>
 
-                <div class="carousel-block">
+             <p class="lead mb-5">
+                <br>
+                <b>I am currently recruiting grad students for 2025.</b>
+                    Research focus is open and flexible, but topics of potential interest include 
+                    evolution of aposematism and mimicry, plant-insect interactions, neotropical biogeography and genomics, genetics of hybrid sterility, invasive species biology, 
+                    tropical biodiversity and global change, appliation of computer vision to taxonomy and systematics, among others.<br> 
+                    Please feel free to get in touch, the deadline for applications is <u>1st December 2024</u>. 
+                <br>
+                <br>
+                <b>Actualmente estoy reclutando estudiantes de posgrado para 2025.</b>
+                   El enfoque de investigación es abierto y flexible, pero los temas de interés potencial incluyen 
+                   la evolución del aposematismo y el mimetismo, interacciones planta-insecto, biogeografía neotropical y genómica, 
+                   genética de la esterilidad híbrida, biología de especies invasoras, biodiversidad tropical y cambio global, 
+                   aplicación de la visión por computadora a la taxonomía y sistemática, entre otros.<br>
+                   No dudes en ponerte en contacto, la fecha límite para las solicitudes es el <u>1 de diciembre de 2024</u>.    
+                <br><br><br>
+             </p>
+            <div class="d-flex justify-content-center"> <!-- Flex container to center the carousel -->
+                <div class="carousel-block" style="width: 80%;"> <!-- Adjust width as needed -->
                     <div id="carouselExampleControls2" class="carousel slide carousel-fade" data-interval="false">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -177,25 +227,9 @@
                 </div>
             </div>
 
-            <p class="lead mb-5">
-                <br>
-                <b>I am currently recruiting grad students for 2025.</b>
-                    Research focus is open and flexible, but topics of potential interest include 
-                    evolution of aposematism and mimicry, plant-insect interactions, neotropical biogeography and genomics, genetics of hybrid sterility, invasive species biology, 
-                    tropical biodiversity and global change, appliation of computer vision to taxonomy and systematics, among others.<br> 
-                    Please feel free to get in touch, the deadline for applications is <u>1st December 2024</u>. 
-                <br>
-                <br>
-                <b>Actualmente estoy reclutando estudiantes de posgrado para 2025.</b>
-                   El enfoque de investigación es abierto y flexible, pero los temas de interés potencial incluyen 
-                   la evolución del aposematismo y el mimetismo, interacciones planta-insecto, biogeografía neotropical y genómica, 
-                   genética de la esterilidad híbrida, biología de especies invasoras, biodiversidad tropical y cambio global, 
-                   aplicación de la visión por computadora a la taxonomía y sistemática, entre otros.<br>
-                   No dudes en ponerte en contacto, la fecha límite para las solicitudes es el <u>1 de diciembre de 2024</u>.    
-                <br><br><br>
-            </p>             
+             
+             
         </section>
-
 
     </div>
 

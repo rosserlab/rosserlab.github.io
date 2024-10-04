@@ -11769,6 +11769,13 @@ h2 {
     }
 }
 
+@media (min-width: 500px) { /* Adjust the breakpoint as needed */
+    .resume-section {
+        max-width: 20%; /* Max width for larger screens */
+    }
+}
+
+
 @media (min-width: 1200px) { /* Another breakpoint for even larger screens */
     .resume-section {
         max-width: 65%; /* Further adjust max width for very large screens */
