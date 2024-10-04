@@ -35,7 +35,20 @@
                     max-width: 100%; /* Allow section to use full width on small screens */
                     padding: 10px; /* Optional padding */
                 }
-                }        
+                } 
+                @media only screen and (max-width: 768px) {
+                    .image-container {
+                        width: 80%; /* Adjust the width for tablet/mobile screens */
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                }
+
+                @media only screen and (max-width: 480px) {
+                    .image-container {
+                        width: 60%; /* Further adjust for small mobile screens */
+                    }
+                }            
         </style>    
 </head>
 <body>
@@ -143,7 +156,7 @@
                         <div class="image-container" style="position: relative; width: 500px; margin-bottom: 100px; margin-left: 50px; margin-right: 50px;">
                             <img src="assets/img/figures/jpegs/twitter_bot2.jpg" alt="Butterfly Image 1" style="width: 100%;">
                         </div>
-                     </div>    
+                    </div>
                  </div>    
             </div>
         </section>
